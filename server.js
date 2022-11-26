@@ -1,7 +1,7 @@
-const fs = require('fs');
-const chalk = require('chalk')
-const validator = require('validator')
-const yargs = require('yargs')
+const fs = require("fs");
+const chalk = require("chalk");
+const validator = require("validator");
+const yargs = require("yargs");
 
 /*const {userDetails, friendName} = require('./utils')
 
@@ -26,21 +26,19 @@ console.log(userDetails.age) */
 
 //console.log(yargs.argv)
 
-
 yargs.command({
-    command: 'add',
-    describe: 'To add new notes..!',
-    builder: {
-        title: {
-            describe: "This is note title",
-            demandOption: true,
-            type: 'string'
-        }
+  command: "add",
+  describe: "To add new notes..!",
+  builder: {
+    title: {
+      describe: "This is note title",
+      demandOption: true,
+      type: "string",
     },
-    handler: function () {
-        console.log('notes added success')
-    },
+  },
+  handler: function () {
+    console.log("notes added success");
+  },
+});
 
-})
-
-yargs.parse()
+yargs.parse();
